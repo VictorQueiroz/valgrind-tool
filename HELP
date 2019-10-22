@@ -1,0 +1,15 @@
+Usage:
+    valgrind-tool [OPTIONS] [INPUT FILES]
+Example:
+    All below examples are valid:
+        export VALGRIND_COMMAND=valgrind \
+            --track-origins=yes --show-leak-kinds=all \
+            --leak-check=full --gen-suppressions=all ./app
+        $VALGRIND_COMMAND | valgrind-tool > a.supp
+        $VALGRIND_COMMAND | valgrind-tool --output a.supp
+Help options:
+    -h, --help                          Show help options
+Application options:
+    --license                           Show license information and exit
+    --comment                           Comment everything that's not suppression instead of ignoring
+    -o, --output=<file>                 Output .supp file
