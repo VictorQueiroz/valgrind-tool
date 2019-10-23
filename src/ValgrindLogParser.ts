@@ -39,7 +39,7 @@ export default class ValgrindLogParser {
     public suppressionsCount = 0;
     public bytesWritten = 0;
     public lineCount = 0;
-    private static readonly BufferReadingOffsetMax = 64**4;
+    private static readonly BufferReadingOffsetMax = 16**4;
     /**
      * 4 spaces
      */
